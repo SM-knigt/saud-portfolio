@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-zinc-950 font-sans text-zinc-300 antialiased;
+  }
+
+  ::selection {
+    @apply bg-cyan-500/30 text-white;
+  }
+}
+
+@keyframes hero-blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(4%, 5%) scale(1.06);
+  }
+  66% {
+    transform: translate(-3%, 2%) scale(0.96);
+  }
+}
+
+.hero-aurora {
+  isolation: isolate;
+}
+
+.hero-blob {
+  width: min(42rem, 120vw);
+  height: min(42rem, 120vw);
+  border-radius: 50%;
+  filter: blur(72px);
+  opacity: 0.38;
+  animation: hero-blob 20s ease-in-out infinite;
+}
+
+.hero-blob-a {
+  left: max(-12rem, -25vw);
+  top: -18%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.5), transparent 68%);
+}
+
+.hero-blob-b {
+  right: max(-14rem, -28vw);
+  top: 15%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.42), transparent 62%);
+  animation-delay: -7s;
+}
+
+.hero-blob-c {
+  left: 15%;
+  bottom: -35%;
+  width: min(34rem, 95vw);
+  height: min(34rem, 95vw);
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.28), transparent 65%);
+  animation-delay: -14s;
+}
+
+/* Horizontal project galleries: comfortable thumb scrolling */
+.gallery-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 211, 238, 0.35) rgba(24, 24, 27, 0.5);
+  padding-bottom: 2px;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.gallery-scroll::-webkit-scrollbar-track {
+  background: rgba(24, 24, 27, 0.6);
+  border-radius: 999px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.35);
+  border-radius: 999px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.5);
+}
+
+/* Hover shine on primary CTAs (respect reduced motion) */
+/* Hero portrait: soft levitation */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-portrait-float {
+    animation: hero-portrait-levitate 5.2s ease-in-out infinite;
+  }
+
+  .hero-portrait-ground {
+    animation: hero-portrait-ground 5.2s ease-in-out infinite;
+  }
+
+  .hero-portrait-halo {
+    animation: hero-portrait-halo 4s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes hero-portrait-levitate {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-11px);
+  }
+}
+
+@keyframes hero-portrait-ground {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translateX(-50%) scaleX(0.88);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateX(-50%) scaleX(1.06);
+  }
+}
+
+@keyframes hero-portrait-halo {
+  0% {
+    opacity: 0.72;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Project hero media: gentle staggered drift */
+@media (prefers-reduced-motion: no-preference) {
+  .project-media-levitate {
+    animation: project-media-levitate 6.8s ease-in-out infinite;
+  }
+
+  .project-media-ground {
+    animation: project-media-ground 6.8s ease-in-out infinite;
+  }
+}
+
+@keyframes project-media-levitate {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes project-media-ground {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: translateX(-50%) scaleX(0.9);
+  }
+  50% {
+    opacity: 0.45;
+    transform: translateX(-50%) scaleX(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .interactive-shine::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 36%,
+      rgba(255, 255, 255, 0.16) 50%,
+      transparent 64%
+    );
+    transform: translateX(-120%);
+    pointer-events: none;
+  }
+
+  .interactive-shine:hover::after {
+    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateX(120%);
+  }
+}
