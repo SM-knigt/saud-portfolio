@@ -6,7 +6,7 @@ export const SITE = {
   headline:
     'I build production ready AI systems for real world impact, from first prototype to production.',
   summary:
-    'I turn AI ideas into shipped software: LLM features, retrieval, and backends built to hold up with real users. I care about clear evals, honest metrics, interfaces that make models usable, and documentation in Arabic and English when it helps the team.',
+    'I turn AI ideas into shipped software: LLM features, retrieval, and backends built to hold up with real users. I care about clear evals, honest metrics, interfaces that make models usable, and communication that keeps engineering and product aligned from prototype to launch.',
   email: 'saudbinsmhan@gmail.com',
   github: 'https://github.com/SM-knigt/SM-knigt',
   linkedin: 'https://www.linkedin.com/in/saudbinsamhan',
