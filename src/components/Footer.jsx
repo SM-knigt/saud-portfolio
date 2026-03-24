@@ -46,12 +46,11 @@ export default function Footer() {
             /
           </span>
           <motion.a
-            href={SITE.cvPath}
-            download
+            href={`mailto:${SITE.email}`}
             whileHover={{ y: -2 }}
-            className="text-sm text-cyan-400/90 transition-colors hover:text-cyan-300"
+            className="text-sm text-zinc-400 transition-colors hover:text-cyan-400"
           >
-            CV
+            Email
           </motion.a>
         </div>
       </div>

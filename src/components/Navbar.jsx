@@ -209,9 +209,9 @@ export default function Navbar() {
                   href={SITE.cvPath}
                   download
                   onClick={close}
-                  className="w-full rounded-xl bg-cyan-500/15 py-2.5 text-center text-sm font-medium text-cyan-300"
+                  className="w-full rounded-xl border border-cyan-500/40 bg-cyan-500/10 py-2.5 text-center text-sm font-medium text-cyan-200 transition hover:border-cyan-400/50 hover:bg-cyan-500/15"
                 >
-                  Download CV
+                  CV
                 </a>
               </li>
             </ul>

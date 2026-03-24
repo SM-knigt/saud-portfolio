@@ -88,16 +88,6 @@ export default function Hero() {
             >
               Contact me
             </motion.a>
-            <motion.a
-              href={SITE.cvPath}
-              download
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: 'spring', stiffness: 400, damping: 22 }}
-              className="inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-medium text-zinc-500 transition-colors hover:text-cyan-200/90"
-            >
-              Download CV
-            </motion.a>
           </motion.div>
         </motion.div>
 

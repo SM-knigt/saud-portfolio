@@ -17,7 +17,18 @@ export default function Contact() {
             <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">Contact</h2>
             <p className="mt-2 text-sm font-medium uppercase tracking-widest text-cyan-500/80">Let&apos;s build</p>
             <p className="mt-6 text-lg text-zinc-400">
-              Open to collaborations on enterprise AI, agent systems, and product-led technical strategy.
+              Open to collaborations on enterprise AI, agents, and product led technical work. Reach out by email or LinkedIn.
+            </p>
+            <p className="mt-6">
+              <motion.a
+                href={`mailto:${SITE.email}`}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center gap-2 font-display text-lg font-medium text-cyan-400 transition hover:text-cyan-300 sm:text-xl"
+              >
+                <MailIcon className="h-5 w-5 shrink-0 opacity-90" />
+                {SITE.email}
+              </motion.a>
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <motion.a
@@ -45,7 +56,7 @@ export default function Contact() {
                 download
                 whileHover={{ scale: 1.03, y: -1 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center justify-center rounded-xl border border-zinc-700 bg-zinc-900/60 px-6 py-3 text-sm font-semibold text-zinc-200 transition hover:border-cyan-500/45"
+                className="inline-flex items-center justify-center rounded-xl border border-zinc-700 bg-zinc-900/50 px-6 py-3 text-sm font-semibold text-zinc-200 transition hover:border-cyan-500/40 hover:bg-zinc-800/50"
               >
                 Download CV
               </motion.a>
@@ -54,5 +65,17 @@ export default function Contact() {
         </motion.div>
       </div>
     </section>
+  )
+}
+
+function MailIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} aria-hidden>
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+      />
+    </svg>
   )
 }

@@ -7,6 +7,7 @@ export const SITE = {
     'I build production ready AI systems for real world impact, from first prototype to production.',
   summary:
     'I turn AI ideas into shipped software: LLM features, retrieval, and backends built to hold up with real users. I care about clear evals, honest metrics, interfaces that make models usable, and documentation in Arabic and English when it helps the team.',
+  email: 'saudbinsmhan@gmail.com',
   github: 'https://github.com/SM-knigt/SM-knigt',
   linkedin: 'https://www.linkedin.com/in/saudbinsamhan',
   cvPath: '/Saud_CV.pdf',
