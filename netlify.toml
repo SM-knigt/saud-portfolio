@@ -1,5 +1,5 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration/
-# Site subdomain (set in Netlify UI): saud-portfolio → https://saud-portfolio.netlify.app
+# Site subdomain (Netlify UI): saudb-portfolio → https://saudb-portfolio.netlify.app
 [build]
   command = "npm run build"
   publish = "dist"

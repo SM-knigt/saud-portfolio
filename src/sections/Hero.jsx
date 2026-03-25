@@ -1,6 +1,6 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import HeroRotatingBadge from '../components/HeroRotatingBadge'
-import SBSLogo from '../components/SBSLogo'
+import HeroPromptMark from '../components/HeroPromptMark'
 import { SITE } from '../config'
 
 const container = {
@@ -46,7 +46,7 @@ export default function Hero() {
           className="text-center lg:col-span-7 lg:text-left"
         >
           <motion.div variants={item} className="mb-5 flex flex-col items-center gap-4 sm:mb-6 lg:items-start">
-            <SBSLogo className="h-11 w-11 sm:h-12 sm:w-12" decorative />
+            <HeroPromptMark />
             <HeroRotatingBadge />
           </motion.div>
 

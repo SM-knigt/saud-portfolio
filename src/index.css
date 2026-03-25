@@ -16,6 +16,24 @@
   }
 }
 
+/* Hero terminal mark: cursor blink */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-prompt-cursor {
+    animation: hero-prompt-blink 1.15s steps(1, end) infinite;
+  }
+}
+
+@keyframes hero-prompt-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes hero-blob {
   0%,
   100% {

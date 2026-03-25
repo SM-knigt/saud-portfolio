@@ -15,7 +15,7 @@ export default function Footer() {
     >
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 py-10 sm:flex-row sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-4">
-          <SBSLogo decorative className="h-8 w-8 shrink-0 opacity-90" />
+          <SBSLogo decorative animated className="h-8 w-8 shrink-0 sm:h-9 sm:w-9" />
           <p className="text-center text-sm text-zinc-500 sm:text-left">
             © {year} {SITE.name}.
           </p>

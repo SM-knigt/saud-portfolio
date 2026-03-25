@@ -67,13 +67,9 @@ export default function Navbar() {
               className="absolute -inset-px rounded-[13px] bg-gradient-to-br from-cyan-400/30 via-transparent to-indigo-500/20 opacity-0 transition duration-400 group-hover:opacity-100"
               aria-hidden
             />
-            <motion.span
-              className="relative rounded-xl ring-1 ring-white/[0.08] transition duration-300 group-hover:ring-cyan-400/35"
-              whileHover={{ rotate: [0, -2.5, 2.5, 0] }}
-              transition={{ duration: 0.55, ease: 'easeInOut' }}
-            >
-              <SBSLogo className="h-9 w-9 sm:h-10 sm:w-10" decorative />
-            </motion.span>
+            <span className="relative rounded-xl ring-1 ring-white/[0.08] transition duration-300 group-hover:ring-cyan-400/35">
+              <SBSLogo className="h-9 w-9 sm:h-10 sm:w-10" decorative animated />
+            </span>
           </span>
           <span className="flex min-w-0 flex-col text-left leading-tight">
             <span className="font-display text-sm font-semibold tracking-tight text-white transition group-hover:text-cyan-50">
